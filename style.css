@@ -1,0 +1,147 @@
+:root {
+  --very-dark-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0%;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  background-color: var(--light-grayish-blue);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 640px;
+  height: 240px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  position: relative;
+}
+
+#image figure {
+  width: 256px;
+  height: 240px;
+}
+
+#image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+#content {
+  padding: 24px;
+}
+
+#content h1 {
+  font-size: 16px;
+  margin-bottom: 14px;
+  color: var(--very-dark-blue);
+}
+
+#content p {
+  font-size: 12px;
+  color: var(--desaturated-dark-blue);
+  margin-bottom: 18px;
+}
+
+#share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+  color: var(--grayish-blue);
+}
+
+#contact img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+#contact h4 {
+  color: var(--very-dark-blue);
+}
+
+button {
+  background-color: var(--light-grayish-blue);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.active {
+  background-color: var(--very-dark-blue);
+  color: #fff;
+}
+
+/* MODAL */
+
+.modal {
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: var(--very-dark-blue);
+  position: absolute;
+  top: 42%;
+  left: 498px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--desaturated-dark-blue);
+  font-weight: bold;
+  letter-spacing: 3px;
+  visibility: hidden;
+}
+
+.shared {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal ul {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-between;
+  margin-left: 16px;
+}
+
+.modal:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: var(--very-dark-blue);
+  position: absolute;
+  bottom: -8px;
+  left: 45%;
+  transform: rotate(45deg);
+}
+
